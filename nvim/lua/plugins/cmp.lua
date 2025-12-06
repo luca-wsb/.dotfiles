@@ -1,22 +1,19 @@
 return {
   "saghen/blink.cmp",
   version = "*",
-  dependencies = {
-    "rafamadriz/friendly-snippets",
-  },
   event = { "InsertEnter", "CmdlineEnter" },
   opts = {
     keymap = {
-      preset = "enter", -- <CR> accepts completion
+      ['<C-s>'] = { 'show', 'show_documentation', 'hide_documentation' },
+      preset = "enter",
+    },
+
+    signature = {
+      enabled = true;
     },
 
     completion = {
-      documentation = { auto_show = true },
-      accept = {
-        auto_brackets = {
-          enabled = true,
-        },
-      },
+      documentation = { auto_show = false },
     },
 
     sources = {
