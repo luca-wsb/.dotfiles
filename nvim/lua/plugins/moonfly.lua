@@ -8,12 +8,21 @@ return {
   --   --   vim.cmd [[colorscheme moonfly]]
   --   -- end
   -- },
+  -- {
+  --   'nvim-mini/mini.base16',
+  --   version = false,
+  --   config = function()
+  --     require('mini.base16').setup({
+  --       palette = require('mini.base16').mini_palette('#0A2A2A', '#D0D0D0', 50)
+  --     })
+  --   end
+  -- },
   {
-    'nvim-mini/mini.base16',
-    version = false,
+    "ellisonleao/gruvbox.nvim",
+    name = "gruvbox",
     config = function()
-      require('mini.base16').setup({
-        palette = require('mini.base16').mini_palette('#0A2A2A', '#D0D0D0', 50)
+      require("gruvbox").setup({
+        vim.cmd("colorscheme gruvbox")
       })
     end
   }
